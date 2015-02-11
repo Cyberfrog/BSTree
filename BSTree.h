@@ -11,3 +11,5 @@ struct bstree
  	Node* root;
  }; 
 BSTree createBSTree(void);
+Node* createNode(int);
+Node * find(BSTree, int);
