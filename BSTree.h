@@ -13,3 +13,7 @@ struct bstree
 BSTree createBSTree(void);
 Node* createNode(int);
 Node * find(BSTree, int);
+Node * findEqual(Node * node,int data);
+int insert(BSTree *, int);
+void insertNode(Node *root,Node *newNode);
+
