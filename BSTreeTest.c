@@ -4,8 +4,9 @@
 
 BSTree t;
 Node *n1,*n2,*n3,*n4,*n5;
+int array[5];
 void setup(){
-	 t = createBSTree();
+	t = createBSTree();
 	n1=createNode(1);
 	n2=createNode(2);
 	n3=createNode(3);
@@ -81,4 +82,15 @@ void test_insert_inserts_the_data_to_left_for_less_than_vlaues(){
 	assertEqual(tree.root->left->data,5);
 	r = find(tree,5); 
 	assertEqual(r->data,5);
+}
+void add(int data){
+	array[data-1]=data;
+}
+void test_travese_travese_tree_from_left_to_right(){
+	traverse(&t, add);
+	assertEqual(array[0],1);
+	assertEqual(array[1],2);
+	assertEqual(array[2],3);
+	assertEqual(array[3],4);
+	assertEqual(array[4],5);
 }

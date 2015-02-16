@@ -39,3 +39,17 @@ void insertNode(Node *root,Node *newNode){
 		root->left?insertNode(root->right, newNode):(root->left=newNode);					
 	}
 }
+
+void traverse(BSTree *tree,Traverser *t){
+	forEachNode(tree->root, t);
+}
+void forEachNode(Node *root,Traverser *t){
+	if(!root){return ;}
+	if(root->left){
+		forEachNode(root->left, t);
+	}
+	t(root->data);
+	if(root->right){
+		forEachNode(root->right,t);
+	}
+}
