@@ -19,5 +19,7 @@ int insert(BSTree *, int);
 void insertNode(Node *root,Node *newNode);
 void traverse(BSTree *,Traverser* t);
 void forEachNode(Node *root,Traverser* t);
+Node * delete(BSTree *, int);
+int findMax(Node *);
 
 

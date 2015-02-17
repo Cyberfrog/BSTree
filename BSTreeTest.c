@@ -94,3 +94,14 @@ void test_travese_travese_tree_from_left_to_right(){
 	assertEqual(array[3],4);
 	assertEqual(array[4],5);
 }
+
+void test_deletes_removes_the_node_from_tree_and_returns_refrence_to_deleted_node(){
+	Node * node =delete(&t,4);
+	assertEqual(node->data,4);
+
+}
+
+void test_findMax_returns_max_value_from_given_tree(){
+	int max = findMax(n3);
+	assertEqual(max, 5);
+}
